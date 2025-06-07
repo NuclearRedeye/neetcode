@@ -1,0 +1,11 @@
+{
+  "name": "neetcode",
+  "version": "1.0.0",
+  "type": "module",
+  "author": "NuclearRedeye",
+  "license": "MIT",
+  "description": "My solutions to neetcode.io challenges",
+  "devDependencies": {
+    "@types/node": "^22.15.30"
+  }
+}
