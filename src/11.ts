@@ -1,16 +1,5 @@
 import { equals } from './utils/array.utils.ts';
 
-// function twoSum(numbers: number[], target: number): number[] {
-//   for (let i = 0; i < numbers.length; i++) {
-//     for (let ii = i + 1; ii < numbers.length; ii++) {
-//       if (numbers[i] + numbers[ii] === target) {
-//         return [1 + i, 1 + ii];
-//       }
-//     }
-//   }
-//   return [];
-// };
-
 function twoSum(numbers: number[], target: number): number[] {
   let left = 0;
   let right = numbers.length - 1;
