@@ -1,14 +1,16 @@
 function lengthOfLongestSubstring(s: string): number {
   let retVal = 0;
+  let cursor = 0;
   let charArray = [...s];
-  let seen: string[] = [];
+  let seen = new Set<string>();
   for (let i = 0; i < charArray.length; i++) {
-    if (seen.includes(charArray[i])) {
-      seen = seen.slice(seen.indexOf(charArray[i]) + 1)
+    while (seen.has(charArray[i])) {
+      seen.delete(charArray[cursor]);
+      cursor += 1;
     }
 
-    seen.push(charArray[i]);
-    retVal = Math.max(seen.length, retVal);
+    seen.add(charArray[i]);
+    retVal = Math.max(seen.size, retVal);
   }
   return retVal;
 }
